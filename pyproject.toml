@@ -8,6 +8,7 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "pydantic (>=2.11.4,<3.0.0)"
 ]
 
 [tool.poetry]
@@ -16,6 +17,9 @@ packages = [{include = "self_improving_ai", from = "src"}]
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.5"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
 
 [tool.mypy]
 ignore_missing_imports = true
