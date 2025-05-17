@@ -1,0 +1,2 @@
+- Make sure to run "poetry run mypy ." prior to concluding
+- Make sure to run "poetry run pytest" and make sure all tests are passing
