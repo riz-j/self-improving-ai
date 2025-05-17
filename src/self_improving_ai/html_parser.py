@@ -23,7 +23,7 @@ def parse_html(html: str) -> List[ElementInfo]:
             self.root = Node("document", {}, None)
             self.current = self.root
 
-        def handle_starttag(self, tag: str, attrs: list[tuple[str, str]]):
+        def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]):
             attrs_dict = dict(attrs)
             node = Node(tag, attrs_dict, self.current)
             self.current.children.append(node)
